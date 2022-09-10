@@ -1,6 +1,7 @@
 print('Hello world!')
 
-a = 2
-b = 3
+a = 3
+b = 2
 
 print(a + b)
+print(a - b)
