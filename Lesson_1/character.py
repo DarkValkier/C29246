@@ -29,5 +29,7 @@ class Berserk(Character):
         return self.damage + (self.hp / self.max_hp) * self.damage
 
     def attack(self, target):
-        target.take_damage(self.count_damage())
+        damage = self.count_damage()
+        target.take_damage(damage)
+        # print(f'{self.name} атаковал {target.name} и нанёс {damage} урона.')
 
