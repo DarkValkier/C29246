@@ -20,7 +20,7 @@ except Exception as error:
 
 try:
     a = 6
-    #b = 'привет'
+    b = 4
 
     print(a / b)
 except ZeroDivisionError as error:
@@ -29,5 +29,9 @@ except TypeError as error:
     print(f'Недопустимый тип данных у одного из операндов!')
 except Exception as error:
     print(f'Непредвиденная ошибка: {type(error)}: {error}')
+else:
+    print('Всё ок!')
+finally:
+    print('Этот блок выполнится в любом случае')
 
 print('Программа завершилась')
