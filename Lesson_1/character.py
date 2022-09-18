@@ -1,6 +1,7 @@
 class Character:
     def __init__(self, name='', hp=30, damage=1, armor=0):
         self.name = name
+        self.max_hp = hp
         self.hp = hp
         self.damage = damage
         self.armor = armor
@@ -10,12 +11,16 @@ class Character:
 
     def take_damage(self, damage):
         # abs - модуль числа (целая часть)
-        self.hp -= abs(damage)
+        self.hp = max(self.hp - abs(damage), 0)
+
+    def take_heal(self, heal):
+        # abs - модуль числа (целая часть)
+        self.hp = min(self.hp + abs(heal), self.max_hp)
 
     def stats(self):
         return \
             f' === {self.name} ===\n' \
-            f' Здоровье: {self.hp}\n' \
+            f' Здоровье: {self.hp} / {self.max_hp}\n' \
             f' Урон: {self.damage}\n' \
             f' Броня: {self.armor}\n'
 
