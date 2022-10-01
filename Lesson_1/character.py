@@ -1,10 +1,10 @@
 class Character:
-    def __init__(self, name='', hp=30, damage=1, armor=0):
+    def __init__(self, name='', hp=30, damage=1, defence=0):
         self.name = name
         self.max_hp = hp
         self.hp = hp
         self.damage = damage
-        self.armor = armor
+        self.defence = defence
 
     def attack(self, target):
         target.take_damage(self.damage)
@@ -22,7 +22,7 @@ class Character:
             f' === {self.name} ===\n' \
             f' Здоровье: {self.hp} / {self.max_hp}\n' \
             f' Урон: {self.damage}\n' \
-            f' Броня: {self.armor}\n'
+            f' Защита: {self.defence}\n'
 
 
 class Berserk(Character):
