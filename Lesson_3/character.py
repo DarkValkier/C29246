@@ -5,7 +5,7 @@ from enum import Enum, auto
 class CharacterStats(Enum):
     HP = auto()
     DAMAGE = auto()
-    ARMOR = auto()
+    DEFENCE = auto()
 
 class CharacterWithItems(Character):
     def __init__(self, name='', hp=30, damage=1, defence=0):
